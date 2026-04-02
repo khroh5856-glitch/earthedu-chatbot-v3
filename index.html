@@ -237,11 +237,11 @@
                 </header>
                 <div class="note-content">
                     <div class="question-block">
-                        <label>1. [기압과 부피 변화] 공기 덩어리가 하늘 높이 올라가면 주변 기압과 부피는 어떻게 변하나요?</label>
+                        <label>1. [기압과 부피 변화] 공기 덩어리가 하늘 높이 올라가면, 공기 덩어리의 기압과 부피는 어떻게 변하나요?</label>
                         <textarea id="ans1" placeholder="예: ~해서 ~하게 된다"></textarea>
                     </div>
                     <div class="question-block">
-                        <label>2. [단열 팽창과 기온 하강] 팽창한 공기 덩어리의 기온은 왜 낮아질까요? (단열 팽창, 일, 에너지 포함)</label>
+                        <label>2. [단열 팽창과 기온 하강] 팽창한 공기 덩어리의 온도는 왜 낮아질까요? (단열 팽창, 일, 에너지 포함)</label>
                         <textarea id="ans2"></textarea>
                     </div>
                     <div class="question-block">
@@ -341,7 +341,7 @@
                 isNameStep = false;
                 sendToSheet('시스템', `--- 챗봇 학습 시작 ---`);
                 
-                const firstQ = `반가워, ${studentName}! 먼저 질문 하나 할게. 하늘 높이 올라갈수록 기압은 어떻게 될까?`;
+                const firstQ = `반가워, ${studentName}! 먼저 질문 하나 할게. 하늘 높이 올라갈수록 공기 덩어리의 기압은 어떻게 될까?`;
                 setTimeout(() => {
                     appendMessage(firstQ, 'bot-message');
                     sendToSheet('AI 선생님', firstQ);
@@ -403,7 +403,7 @@
 1. 절대 점수나 등급을 매기지 마세요.
 2. 학생을 격려하고 칭찬하는 부드러운 말투를 사용하세요.
 3. 문항별로 피드백을 주되, 주어나 동사가 빠져 문장이 어색하다면 완전한 문장으로 쓰도록 지도하세요.
-4. 핵심 키워드(단열 팽창, 부피 팽창, 주변 공기를 밀어내는 일, 에너지 소모, 기온 하강 등) 누락 시, 직접 답을 주지 말고 "OO에 대한 내용이 조금 부족한데, 추가해서 다시 적어볼까?"라고 질문하세요.
+4. 핵심 키워드(단열 팽창, 부피 팽창, 주변 공기를 밀어내는 일, 에너지 소모, 기온 하강 등) 누락 시, 직접 예시 답안을 주세요.
 5. 4번 문항은 아직 완벽히 배우지 않은 (임시) 문항이므로 너무 엄격하게 평가하지 말고, 도전한 것을 크게 격려해 주세요.`
 ;
 
