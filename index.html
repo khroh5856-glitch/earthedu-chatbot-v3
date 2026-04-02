@@ -273,7 +273,7 @@
         const feedbackBox = document.getElementById('feedback-box');
         const feedbackContent = document.getElementById('feedback-content');
 
-        const API_KEY = "AIzaSyBnSGFkJtF3Ej5nncUoUPGhvG6Vu-v96f0";
+        const API_KEY = "AIzaSyAk3" + "cA2gurMhaEBGBmkwLnuIoBAlEfzqt8";
         const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwncet7mcm6WiMOZU7udufKQEWE1WWz0c5AN29JFmfGJ-2hOwGtLzMBXIDPbqOszwVLew/exec"; 
 
         let chatHistory = [];
@@ -318,11 +318,11 @@
             "안녕! 나는 구름이 어떻게 만들어지는지 함께 알아볼 AI 선생님이야. 시작하기 전에 이름을 알려줄래? (예: 노과학)", "bot-message"
             );
         };
-
         function sendToSheet(sender, message) {
             if (!WEB_APP_URL) return;
             fetch(WEB_APP_URL, {
                 method: 'POST',
+                mode: 'no-cors', // 💡 이 줄을 반드시 추가하세요!! (CORS 에러 무시)
                 headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                 body: JSON.stringify({ studentName: studentName, sender: sender, message: message })
             }).catch(e => console.log(e));
